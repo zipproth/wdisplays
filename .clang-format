@@ -1,6 +1,9 @@
 ﻿---
-Language: Cpp
 IndentWidth: 2
+# SPDX-SnippetBegin
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-SnippetCopyrightText: NONE
+Language: Cpp
 AlignConsecutiveAssignments:
   Enabled: true
   AcrossEmptyLines: false
@@ -53,3 +56,4 @@ SpacesInLineCommentPrefix:
   Maximum: 1
 SpacesInParens: Never
 UseTab: Never
+# SPDX-SnippetEnd
