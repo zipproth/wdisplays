@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the network.cycles.wdisplays package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: network.cycles.wdisplays\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-02 16:03+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/headform.c:193
+msgid "Don't Rotate"
+msgstr ""
+
+#: src/headform.c:194
+msgid "Rotate 90°"
+msgstr ""
+
+#: src/headform.c:195
+msgid "Rotate 180°"
+msgstr ""
+
+#: src/headform.c:196
+msgid "Rotate 270°"
+msgstr ""
+
+#: resources/head.ui:48
+msgid "_Enabled"
+msgstr ""
+
+#: resources/head.ui:96
+msgid "DPI _Scale"
+msgstr ""
+
+#: resources/head.ui:110
+msgid "_Position"
+msgstr ""
+
+#: resources/head.ui:124
+msgid "Description"
+msgstr ""
+
+#: resources/head.ui:150
+msgid "Physical Size"
+msgstr ""
+
+#: resources/head.ui:162
+msgid "Si_ze"
+msgstr ""
+
+#: resources/head.ui:201
+msgid "Hz"
+msgstr ""
+
+#: resources/head.ui:219
+msgid "_Refresh Rate"
+msgstr ""
+
+#: resources/head.ui:246
+msgid "_Transform"
+msgstr ""
+
+#: resources/head.ui:257
+msgid "_Flipped"
+msgstr ""
+
+#: resources/head.ui:281 resources/head.ui:298 resources/head.ui:316
+#: resources/head.ui:346
+msgid "0"
+msgstr ""
+
+#: resources/head.ui:333
+msgid "×"
+msgstr ""
+
+#: resources/head.ui:363
+msgid "Select Mode Preset"
+msgstr ""
+
+#: resources/wdisplays.ui:16 resources/wdisplays.ui:186
+msgid "wdisplays"
+msgstr ""
+
+#: resources/wdisplays.ui:198
+msgid "Zoom Out"
+msgstr ""
+
+#: resources/wdisplays.ui:221
+msgid "Zoom Reset"
+msgstr ""
+
+#: resources/wdisplays.ui:237
+msgid "Zoom In"
+msgstr ""
+
+#: resources/wdisplays.ui:291
+msgid "Apply Changes?"
+msgstr ""
+
+#: resources/wdisplays.ui:296
+msgid "_Apply"
+msgstr ""
+
+#: resources/wdisplays.ui:312
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Automatically Apply Changes"
+msgstr ""
+
+msgid "_Show Screen Contents"
+msgstr ""
+
+msgid "_Overlay Screen Names"
+msgstr ""
+
+msgid "Change was applied successfully and config was saved."
+msgstr ""
