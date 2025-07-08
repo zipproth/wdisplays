@@ -6,6 +6,19 @@ This project tries to adhere to [Semantic Versioning][2].
 
 ## [Unreleased]
 
+## [1.1.2] - 2025-07-08
+
+### Added
+
+Gettext internationalization 
+ru.po
+Internationalization in network.cycles.wdisplays.desktop
+https://aur.archlinux.org/cgit/aur.git/tree/outputs_noop.patch?h=wdisplays-persistent
+
+### Fixed
+
+setlocale(LC_NUMERIC, "C") in src/store.c
+
 ## [1.1.1] - 2023-07-01
 
 ### Added
