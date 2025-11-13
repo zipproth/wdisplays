@@ -3,6 +3,7 @@
 // SPDX-FileCopyrightText: 2024-2025 Jason André Charles Gantner
 
 #include "wdisplays.h"
+#include <locale.h>
 #include <ctype.h>
 #include <limits.h>
 #include <regex.h>
@@ -48,7 +49,8 @@ char *wd_get_config_file_path() {
 
   // look for store_path in wdisplays.conf
   snprintf(wdisplaysPath, sizeof(wdisplaysPath), "%s/wdisplays.conf", defaultConfigDir);
-
+  
+  setlocale(LC_NUMERIC, "C");
   FILE *wdisplaysFile = fopen(wdisplaysPath, "r");
   if (wdisplaysFile != NULL) {
     char line[LINE_MAX]; // LINE_MAX is a platform-dependendant macro
