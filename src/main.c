@@ -1,6 +1,10 @@
 /* SPDX-FileCopyrightText: 2020 Jason Francis <jason@cycles.network>
  * SPDX-License-Identifier: GPL-3.0-or-later */
 
+#include <glib/gi18n.h>
+#include <locale.h>       // Должен быть самым первым (для корректной работы setlocale)
+#include <libintl.h>
+
 #include <gtk/gtk.h>
 #include <gdk/gdkwayland.h>
 
@@ -1035,9 +1039,9 @@ static void activate(GtkApplication* app, gpointer user_data) {
   g_action_map_add_action(G_ACTION_MAP(main_actions), G_ACTION(overlay_action));
 
   GMenu *main_menu = g_menu_new();
-  g_menu_append(main_menu, "_Automatically Apply Changes", "app.auto-apply");
-  g_menu_append(main_menu, "_Show Screen Contents", "app.capture-screens");
-  g_menu_append(main_menu, "_Overlay Screen Names", "app.show-overlay");
+  g_menu_append(main_menu, _("_Automatically Apply Changes"), "app.auto-apply");
+  g_menu_append(main_menu, _("_Show Screen Contents"), "app.capture-screens");
+  g_menu_append(main_menu, _("_Overlay Screen Names"), "app.show-overlay");
   gtk_menu_button_set_menu_model(GTK_MENU_BUTTON(state->menu_button), G_MENU_MODEL(main_menu));
 
   g_signal_connect(state->info_bar, "response", G_CALLBACK(info_response), state);
@@ -1082,8 +1086,14 @@ static void activate(GtkApplication* app, gpointer user_data) {
 // END GLOBAL CALLBACKS
 
 int main(int argc, char *argv[]) {
+    // 1. Инициализация локализации (должна быть ДО gtk_init)
+    setlocale(LC_ALL, "");
+    bindtextdomain("wdisplays", "/usr/share/locale");
+    bind_textdomain_codeset("wdisplays", "UTF-8");  // Важно для корректного отображения
+    textdomain("wdisplays");
+    
   g_setenv("GDK_GL", "gles", FALSE);
-  GtkApplication *app = gtk_application_new(WDISPLAYS_APP_ID, G_APPLICATION_DEFAULT_FLAGS);
+  GtkApplication *app = gtk_application_new(WDISPLAYS_APP_ID, G_APPLICATION_FLAGS_NONE);
   g_signal_connect(app, "activate", G_CALLBACK(activate), NULL);
   int status = g_application_run(G_APPLICATION(app), argc, argv);
   g_object_unref(app);

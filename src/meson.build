@@ -6,8 +6,9 @@ m_dep = cc.find_library('m', required : false)
 rt_dep = cc.find_library('rt', required : false)
 gdk = dependency('gdk-3.0', version: '>= 3.24')
 gtk = dependency('gtk+-3.0', version: '>= 3.24')
-assert(gdk.get_variable('targets').split().contains('wayland'), 'Wayland GDK backend not present')
+assert(gdk.get_pkgconfig_variable('targets').split().contains('wayland'), 'Wayland GDK backend not present')
 epoxy = dependency('epoxy')
+i18n = import('i18n')
 
 configure_file(input: 'config.h.in', output: 'config.h', configuration: conf)
 

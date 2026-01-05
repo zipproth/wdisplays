@@ -1,0 +1,123 @@
+# Russian translations for wdisplays package.
+# Copyright (C) 2022 wdisplays authors.
+# This file is distributed under the same license as the wdisplays package.
+# Automatically generated, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: wdisplays\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-15 12:45+0300\n"
+"PO-Revision-Date: 2022-11-15 12:47+0300\n"
+"Last-Translator: sfs <sfslinux@gmail.com>\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: wdisplays.ui:6
+msgid "wdisplays"
+msgstr "Настройки дисплеев"
+
+#: wdisplays.ui:157
+msgid "Zoom Out"
+msgstr "Уменьшить"
+
+#: wdisplays.ui:170
+msgid "Zoom Reset"
+msgstr "Сбросить масштаб"
+
+#: wdisplays.ui:183
+msgid "Zoom In"
+msgstr "Увеличить"
+
+#: wdisplays.ui:233
+msgid "Apply Changes?"
+msgstr "Применить изменения?"
+
+#: wdisplays.ui:244
+msgid "_Apply"
+msgstr "_Применить"
+
+#: wdisplays.ui:258
+msgid "_Cancel"
+msgstr "_Отмена"
+
+
+
+
+
+#: head.ui:48
+msgid "_Enabled"
+msgstr "_Включено"
+
+#: head.ui:96
+msgid "DPI _Scale"
+msgstr "Масштаб _DPI"
+
+#: head.ui:110
+msgid "_Position"
+msgstr "_Позиция"
+
+#: head.ui:124
+msgid "Description"
+msgstr "Описание"
+
+#: head.ui:150
+msgid "Physical Size"
+msgstr "Физический размер"
+
+#: head.ui:162
+msgid "Si_ze"
+msgstr "Ра_змер"
+
+#: head.ui:201
+msgid "Hz"
+msgstr "Гц"
+
+#: head.ui:219
+msgid "_Refresh Rate"
+msgstr "Частота обно_вления"
+
+#: head.ui:246
+msgid "_Transform"
+msgstr "_Трансформация"
+
+#: head.ui:257
+msgid "_Flipped"
+msgstr "_Отразить"
+
+#: head.ui:281 head.ui:298 head.ui:316 head.ui:346
+msgid "0"
+msgstr "0"
+
+#: head.ui:363
+msgid "Select Mode Preset"
+msgstr "Выбор предустановки режима"
+
+msgid "Don't Rotate"
+msgstr "Не вращать"
+
+msgid "Rotate 90°"
+msgstr "Повернуть на 90°"
+
+msgid "Rotate 180°"
+msgstr "Повернуть на 180°"
+
+msgid "Rotate 270°"
+msgstr "Повернуть на 270°"
+
+msgid "_Automatically Apply Changes"
+msgstr "_Автоматически применять изменения"
+
+msgid "_Show Screen Contents"
+msgstr "_Показывать содержимое экранов"
+
+msgid "_Overlay Screen Names"
+msgstr "_Показывать названия экранов"
+
+msgid "Change was applied successfully and config was saved."
+msgstr "Изменения успешно применены и конфигурация сохранена."

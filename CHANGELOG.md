@@ -8,6 +8,9 @@ This project tries to adhere to [Semantic Versioning][2].
 
 ### Added
 
+Gettext internationalization 
+ru.po
+Internationalization in network.cycles.wdisplays.desktop
 Support for saving kanshi config file
 
 ### Changed

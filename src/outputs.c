@@ -8,6 +8,7 @@
  * https://github.com/emersion/kanshi/blob/38d27474b686fcc8324cc5e454741a49577c0988/main.c
  */
 
+#include <glib/gi18n.h>
 #define _GNU_SOURCE
 #include <assert.h>
 #include <stdlib.h>
@@ -57,7 +58,7 @@ static void config_handle_succeeded(void *data,
   if (store_config(pending->outputs) == 0)
   {
     wd_ui_show_error(pending->state,
-      "Change was applied successfully and config was saved.");
+      _("Change was applied successfully and config was saved."));
   }
   destroy_pending(pending);
 }
@@ -533,7 +534,7 @@ static void output_manager_handle_done(void *data,
 static const struct zwlr_output_manager_v1_listener output_manager_listener = {
   .head = output_manager_handle_head,
   .done = output_manager_handle_done,
-  .finished = (void (*)(void *, struct zwlr_output_manager_v1 *))noop,
+  .finished = (void (*) (void *data, struct zwlr_output_manager_v1 *zwlr_output_manager_v1)) noop,
 };
 static void registry_handle_global(void *data, struct wl_registry *registry,
     uint32_t name, const char *interface, uint32_t version) {
@@ -560,7 +561,7 @@ static void registry_handle_global(void *data, struct wl_registry *registry,
 
 static const struct wl_registry_listener registry_listener = {
   .global = registry_handle_global,
-  .global_remove = (void (*)(void *, struct wl_registry *, uint32_t))noop,
+  .global_remove = (void (*) (void* data, struct wl_registry* wl_registry, uint name)) noop,
 };
 
 void wd_add_output_management_listener(struct wd_state *state, struct
@@ -610,10 +611,10 @@ static void output_name(void *data, struct zxdg_output_v1 *zxdg_output_v1,
 
 static const struct zxdg_output_v1_listener output_listener = {
   .logical_position = output_logical_position,
-  .logical_size = (void (*)(void *, struct zxdg_output_v1 *, int32_t,  int32_t))noop,
-  .done = (void (*)(void *, struct zxdg_output_v1 *))noop,
+  .logical_size = (void (*) (void *data, struct zxdg_output_v1 *zxdg_output_v1, int32_t width, int32_t height)) noop,
+  .done = (void (*) (void *data, struct zxdg_output_v1 *zxdg_output_v1)) noop,
   .name = output_name,
-  .description = (void (*)(void *, struct zxdg_output_v1 *, const char *))noop
+  .description = (void (*) (void *data, struct zxdg_output_v1 *zxdg_output_v1, const char *description)) noop
 };
 
 void wd_add_output(struct wd_state *state, struct wl_output *wl_output,

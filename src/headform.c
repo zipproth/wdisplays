@@ -1,6 +1,6 @@
 /* SPDX-FileCopyrightText: 2020 Jason Francis <jason@cycles.network>
  * SPDX-License-Identifier: GPL-3.0-or-later */
-
+#include <glib/gi18n.h>
 #include "headform.h"
 #include "wdisplays.h"
 
@@ -190,10 +190,10 @@ static void wd_head_form_init(WdHeadForm *form) {
   gtk_widget_insert_action_group(priv->rotate_button, HEAD_PREFIX, G_ACTION_GROUP(head_actions));
 
   GMenu *rotate_menu = g_menu_new();
-  g_menu_append(rotate_menu, "Don't Rotate", "head.rotate(0)");
-  g_menu_append(rotate_menu, "Rotate 90°", "head.rotate(90)");
-  g_menu_append(rotate_menu, "Rotate 180°", "head.rotate(180)");
-  g_menu_append(rotate_menu, "Rotate 270°", "head.rotate(270)");
+  g_menu_append(rotate_menu, _("Don't Rotate"), "head.rotate(0)");
+  g_menu_append(rotate_menu, _("Rotate 90°"), "head.rotate(90)");
+  g_menu_append(rotate_menu, _("Rotate 180°"), "head.rotate(180)");
+  g_menu_append(rotate_menu, _("Rotate 270°"), "head.rotate(270)");
   gtk_menu_button_set_menu_model(GTK_MENU_BUTTON(priv->rotate_button), G_MENU_MODEL(rotate_menu));
 
   static const GVariantType * const mode_types[] = {
